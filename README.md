@@ -1,12 +1,12 @@
 <details>
   
-  <summary> Love && peace </summary>
+  <summary> ... </summary>
   
 
   ![](https://i.imgur.com/AV49ghA.jpg)
   
   ```
-  主管虐我千百遍，我待主管如初戀
+  Sometimes life’s going to hits you in the head with a brick. Don't lose faith
   ```
 
 
