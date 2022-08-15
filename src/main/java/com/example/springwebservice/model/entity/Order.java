@@ -18,20 +18,12 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int orderId;
+    private Integer orderId;
 
     @Column
-    private int totalPrice;
+    private Integer totalPrice;
 
     @Column
     private String waiter;
-
-    @ManyToMany
-    @JoinTable(
-            name = "meal",
-            joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "meal_id")
-    )
-    private List<Meal> mealList;
 
 }

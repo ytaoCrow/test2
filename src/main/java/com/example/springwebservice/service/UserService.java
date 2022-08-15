@@ -48,19 +48,23 @@ public class UserService {
             this.userRepository.save(getUser);
             return "ok";
         }
+//        if (getUser !=null){
+
+//        }
+
 
     }
 
     public String deleteUser(int id) {
         User user=this.userRepository.findById(id);
         if (null != user){
-
+            //            this.userRepository.delete(user);
             this.userRepository.deleteById(id);
 
-            return "Fail";
+            return "ok";
         }else {
 
-            return "ok";
+            return "Fail";
         }
 
     }

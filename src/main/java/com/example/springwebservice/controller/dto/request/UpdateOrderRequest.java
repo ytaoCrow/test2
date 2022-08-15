@@ -1,11 +1,11 @@
 package com.example.springwebservice.controller.dto.request;
 
 import com.example.springwebservice.model.entity.Meal;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateOrderRequest {

@@ -1,6 +1,6 @@
 package com.example.springwebservice.controller;
 
-import com.example.springwebservice.controller.dto.reponse.StatusResponse;
+import com.example.springwebservice.controller.dto.response.StatusResponse;
 import com.example.springwebservice.controller.dto.request.CreateOrderRequest;
 import com.example.springwebservice.controller.dto.request.UpdateOrderRequest;
 import com.example.springwebservice.model.entity.Order;
@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/order")
@@ -18,35 +19,34 @@ public class OrderController {
    private OrderService orderService;
 
     @GetMapping()
-    public List<Order> getAllOrders() {
-        List<Order> orderList =this.orderService.getOrderList();
-        return orderList;
+    public List<Map<String, Object>> getAllOrders() {
+
+        List<Map<String, Object>> response = this.orderService.getOrderList();
+        return response;
     }
 
     @GetMapping("/{id}")
-    public Order getOrder(@PathVariable int id) {
-
-        Order order = this.orderService.getOrderById(id);
-
-        return order;
+    public Map<String, Object> getOrder(@PathVariable int id) {
+        Map<String, Object> response = this.orderService.getOrderById(id);
+        return response;
     }
 
     @PostMapping()
     public StatusResponse createOrder(@RequestBody CreateOrderRequest request) {
-        String order = (this.orderService.createOrder(request));
-        return new StatusResponse(order);
+        String response = (this.orderService.createOrder(request));
+        return new StatusResponse(response);
     }
 
     @PutMapping("/{id}")
     public StatusResponse updateOrder(@PathVariable int id,
                                       @RequestBody UpdateOrderRequest request) {
-        String order = this.orderService.updateUser(id,request);
-        return new StatusResponse(order);
+        String response=this.orderService.updateUser(id,request);
+        return new StatusResponse(response);
     }
     @DeleteMapping("/{id}")
     public StatusResponse deleteOrder(@PathVariable int id) {
-        String order =this.orderService.deleteOrder(id);
+        String reponse =this.orderService.deleteOrder(id);
 
-        return new StatusResponse(order);
+        return new StatusResponse(reponse);
     }
 }

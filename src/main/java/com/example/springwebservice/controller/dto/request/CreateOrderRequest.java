@@ -1,12 +1,13 @@
 package com.example.springwebservice.controller.dto.request;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import com.example.springwebservice.model.entity.Meal;
-import lombok.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.Map;
 
 
-
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateOrderRequest {
@@ -14,5 +15,5 @@ public class CreateOrderRequest {
     private int orderId;
     private int totalPrice;
     private String waiter;
-    private Meal mealList;
+    private Map<String, Integer> mealMap;
 }

@@ -1,9 +1,8 @@
 package com.example.springwebservice.controller;
 
-import com.example.springwebservice.controller.dto.reponse.StatusResponse;
+import com.example.springwebservice.controller.dto.response.StatusResponse;
 import com.example.springwebservice.controller.dto.request.CreateUserRequest;
 import com.example.springwebservice.controller.dto.request.UpdateUserRequest;
-import com.example.springwebservice.model.UserRepository;
 import com.example.springwebservice.model.entity.User;
 import com.example.springwebservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,6 @@ public class UserController {
     //@PathVariable 唯一識別
     @GetMapping("/{id}")
     public User getUser(@PathVariable int id) {
-
         User response=this.userService.getUserById(id);
         return response;
     }

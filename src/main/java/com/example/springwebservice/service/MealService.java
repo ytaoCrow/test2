@@ -7,6 +7,7 @@ import com.example.springwebservice.controller.dto.request.UpdateOrderRequest;
 import com.example.springwebservice.model.MealRepository;
 import com.example.springwebservice.model.entity.Meal;
 import com.example.springwebservice.model.entity.Order;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,12 +17,15 @@ public class MealService {
 
     List<Meal> mealList;
 
+    @Autowired
     private MealRepository mealRepository;
 
     public List<Meal> getMealList() {
 
-        List<Meal> response = mealRepository.findAll();
+        List<Meal> response = this.mealRepository.findAll();
+        System.out.println(response.toString());
         return response;
+
     }
 
     public Meal getMealById(int mealId) {
@@ -49,7 +53,10 @@ public class MealService {
             return "Fail";
         } else {
 
-            getMeal.setMealId(request.getMealId());
+            System.out.println(getMeal);
+            System.out.println(request);
+
+            getMeal.setMealId(mealId);
             getMeal.setMealName(request.getMealName());
             getMeal.setPrice(request.getPrice());
             getMeal.setDescription(request.getDescription());
@@ -63,7 +70,7 @@ public class MealService {
         Meal meal = this.mealRepository.findById(mealId);
         if (null != meal){
 
-            this.mealRepository.deleteById(mealId);
+            this.mealRepository.delete(meal);
 
             return "ok";
         }else {

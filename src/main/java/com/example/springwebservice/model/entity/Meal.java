@@ -22,9 +22,10 @@ public class Meal {
     private String mealName;
 
     @Column
-    private int price;
+    private Integer price;
 
     @Column
     private String description;
+
 
 }
