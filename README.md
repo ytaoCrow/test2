@@ -6,7 +6,7 @@
 1. 
 ![](https://i.imgur.com/AaCNN9U.png)
 
-2. 設定URL為: 
+2. 設定 URL 為: 
 ```
 jdbc:h2:tcp://localhost:9092/mem:training
 
