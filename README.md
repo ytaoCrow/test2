@@ -1,5 +1,5 @@
 # HW 0812
-## 請在 Postman 導入 **JPA訂單系統.postman_collection.json** 測試 API
+## 請在 Postman 導入 {JPA訂單系統.postman_collection.json} 測試 API
 
 ## 請用外部連結導入 H2 DB
 
