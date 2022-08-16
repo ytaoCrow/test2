@@ -67,17 +67,3 @@ jdbc:h2:tcp://localhost:9092/mem:training
     * getOrderById : http://localhost:8080/order/1
 * 新增訂單
     * postOrder : http://localhost:8080/order
-
-<details>
-  
-  <summary> ... </summary>
-  
-
-  ![](https://i.imgur.com/AV49ghA.jpg)
-  
-  ```
-  Sometimes life hits you in the head with a brick. Don't lose faith.
-  ```
-
-
-</details>
