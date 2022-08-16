@@ -1,12 +1,12 @@
 # HW 0812
-## 請使用 Postman 測試 API
+## 請在 Postman 導入 {JPA訂單系統.postman_collection.json} 測試 API
 
 ## 請用外部連結導入 H2 DB
 
 1. 
 ![](https://i.imgur.com/AaCNN9U.png)
 
-2. 設定URL為: 
+2. 設定 URL 為: 
 ```
 jdbc:h2:tcp://localhost:9092/mem:training
 
