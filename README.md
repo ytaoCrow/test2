@@ -3,6 +3,8 @@
 
 ## 請用外部連結導入 H2 DB
 
+* 導入可參考[這篇文章](https://stackoverflow.com/questions/43256295/how-to-access-in-memory-h2-database-of-one-spring-boot-application-from-another/43276769#43276769)
+
 1. 
 ![](https://i.imgur.com/AaCNN9U.png)
 
