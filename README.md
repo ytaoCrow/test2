@@ -1,13 +1,5 @@
 # HW 0812
-## 請使用 API Tester 測試 API
-
-連結：
-https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=zh-TW
-
-加入擴充功能，並打開 API Tester
-左下角 Import **JPA訂單系統.json**  就能 call API
-
-![](https://i.imgur.com/tdC11GI.png)
+## 請使用 Postman 測試 API
 
 ## 請用外部連結導入 H2 DB
 
