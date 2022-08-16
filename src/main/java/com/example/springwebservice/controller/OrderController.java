@@ -2,7 +2,6 @@ package com.example.springwebservice.controller;
 
 import com.example.springwebservice.controller.dto.response.StatusResponse;
 import com.example.springwebservice.controller.dto.request.CreateOrderRequest;
-import com.example.springwebservice.controller.dto.request.UpdateOrderRequest;
 import com.example.springwebservice.model.entity.Order;
 import com.example.springwebservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +13,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
+
+    List<Order> orderList;
 
    @Autowired
    private OrderService orderService;
@@ -35,18 +36,5 @@ public class OrderController {
     public StatusResponse createOrder(@RequestBody CreateOrderRequest request) {
         String response = (this.orderService.createOrder(request));
         return new StatusResponse(response);
-    }
-
-    @PutMapping("/{id}")
-    public StatusResponse updateOrder(@PathVariable int id,
-                                      @RequestBody UpdateOrderRequest request) {
-        String response=this.orderService.updateUser(id,request);
-        return new StatusResponse(response);
-    }
-    @DeleteMapping("/{id}")
-    public StatusResponse deleteOrder(@PathVariable int id) {
-        String reponse =this.orderService.deleteOrder(id);
-
-        return new StatusResponse(reponse);
     }
 }

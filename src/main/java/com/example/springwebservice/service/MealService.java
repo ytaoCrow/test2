@@ -1,12 +1,9 @@
 package com.example.springwebservice.service;
 
 import com.example.springwebservice.controller.dto.request.CreateMealRequest;
-import com.example.springwebservice.controller.dto.request.CreateOrderRequest;
 import com.example.springwebservice.controller.dto.request.UpdateMealRequest;
-import com.example.springwebservice.controller.dto.request.UpdateOrderRequest;
 import com.example.springwebservice.model.MealRepository;
 import com.example.springwebservice.model.entity.Meal;
-import com.example.springwebservice.model.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
