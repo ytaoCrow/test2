@@ -18,7 +18,7 @@ jdbc:h2:tcp://localhost:9092/mem:training
 ![](https://i.imgur.com/Nl187WD.png)
 
 
-3. 如果要跳過設定，將 ZIP 拉到桌面，直接解壓縮 ZIP 檔，拉進 IntelliJ IDEA，這樣啟動 H2 DB 不用重新連線！
+3. 如果要跳過設定，將 ZIP 拉到桌面，直接解壓縮 ZIP 檔，拉進 IntelliJ IDEA，這樣啟動專案 H2 DB 不用重新連線！
 
 ## API 簡介：
 
