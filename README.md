@@ -49,6 +49,8 @@ jdbc:h2:tcp://localhost:9092/mem:training
 }
 ```
 3. 如果要測試第四筆餐點，請先在 createMeal 新增一筆餐點的資料
+4. 請使用 getAllOrders 查詢全部的訂單
+5. 請使用 getOrderById 查詢全部的訂單
 
 ### Meal
 
